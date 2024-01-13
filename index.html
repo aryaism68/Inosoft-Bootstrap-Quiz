@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aurelia Bakery</title>
+    <link rel="icon" type="image/png" href="./assets/images/logoTitle.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+      @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+
+      body {
+        font-family: "Acme", "Quicksand", sans-serif;
+        background-color: #fff5e3;
+      }
+
+      @media screen and (max-width: 992px) {
+        .custom-flex {
+          flex-wrap: wrap;
+        }
+      }
+
+      .custom-flex {
+        flex-direction: row;
+      }
+
+      .text-orange {
+        color: orange;
+      }
+
+      .custom-margin-brand {
+        margin-top: 10px;
+        margin-bottom: -5px;
+      }
+
+      .custom-margin-slogan {
+        margin-top: -5px;
+      }
+
+      .navbar-hover-color {
+        --bs-nav-link-hover-color: #ff4d01;
+      }
+
+      .background-custom {
+        background-color: #fff5e3;
+      }
+
+      @media screen and (max-width: 992px) {
+        .background-custom-navbar-md {
+          background-color: #f1e4cc;
+        }
+      }
+
+      div.scroll-container {
+        padding: 10px;
+        background-color: #fff5e3;
+        overflow: auto;
+        white-space: nowrap;
+      }
+
+      div.scroll-container img {
+        padding-right: 7px;
+        width: 50%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .slide-custom-height {
+          max-height: 400px;
+        }
+      }
+
+      .slide-custom-height {
+        max-height: 500px;
+      }
+
+      .featured-image {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+      }
+
+      .background-custom-darker {
+        background-color: #f8e29d;
+      }
+
+      .footer-position-custom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .text-brown {
+        color: #d47c2e;
+      }
+
+      .background-custom-contact {
+        background-color: #f8e29d;
+      }
+
+      .custom-size-btn {
+        width: 50%;
+      }
+
+      @media screen and (max-width: 992px) {
+        .custom-size-btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="px-3 py-2 border-bottom border-warning">
+        <div class="container-fluid">
+          <div class="d-flex custom-flex justify-content-between">
+            <a href="#" class="d-flex text-decoration-none">
+              <img src="assets/images/logoTitle.png" class="logoHeader" alt="logoHeader" />
+              <div class="row">
+                <h1 class="text-orange custom-margin-brand">Aurelia Bakery</h1>
+                <h3 class="text-orange custom-margin-slogan">The Best Bakery in Town</h3>
+              </div>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto justify-content-center my-0 text-small navbar-hover-color">
+              <li>
+                <a href="#cakes" class="nav-link text-orange text-center background-custom-navbar-md">
+                  <img src="./assets/images/cakesIcon.jpg" class="bi d-block mx-auto mb-1 d-none d-lg-block" width="50" height="50" />
+                  Cakes
+                </a>
+              </li>
+              <li>
+                <a href="#cookies" class="nav-link text-orange text-center background-custom-navbar-md">
+                  <img src="./assets/images/cookiesIcon.jpg" class="bi d-block mx-auto mb-1 d-none d-lg-block" width="50" height="50" />
+                  Cookies
+                </a>
+              </li>
+              <li>
+                <a href="#cupcakes" class="nav-link text-orange text-center background-custom-navbar-md">
+                  <img src="./assets/images/cupcakesIcon.jpg" class="bi d-block mx-auto mb-1 d-none d-lg-block" width="50" height="50" />
+                  Cupcakes
+                </a>
+              </li>
+              <li>
+                <a href="#donuts" class="nav-link text-orange text-center background-custom-navbar-md">
+                  <img src="./assets/images/donutsIcon.jpg" class="bi d-block mx-auto mb-1 d-none d-lg-block" width="50" height="50" />
+                  Donuts
+                </a>
+              </li>
+              <li>
+                <a href="#pastries" class="nav-link text-orange text-center background-custom-navbar-md">
+                  <img src="./assets/images/pastriesIcon.jpg" class="bi d-block mx-auto mb-1 d-none d-lg-block" width="50" height="50" />
+                  Pastries
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="scroll-container mb-3 mx-auto slide-custom-height">
+        <img src="./assets/images/cakes.png" alt="Cakes" />
+        <img src="./assets/images/cookies.png" alt="Cookies" />
+        <img src="./assets/images/cupcakes.png" alt="Cupcakes" />
+        <img src="./assets/images/donuts.png" alt="Donuts" />
+        <img class="pe-3" src="./assets/images/pastries.png" alt="Pastries" />
+      </div>
+
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-4 col-12 mb-4">
+            <div class="card background-custom text-orange h-100">
+              <div class="card-header p-4 border-0 background-custom">
+                <h5 class="card-title" id="cakes">Cakes</h5>
+                <img class="card-img-top featured-image" src="./assets/images/cakesArticle.png" alt="CakesCard" />
+              </div>
+
+              <div class="card-body p-3 text-center">
+                <div class="card-text">
+                  <h3 id="chocoCake">Choco Cake</h3>
+                  <p>A sweet temptation noone can resist.<br />This melt-in-mouth Choco Cake is the best to&nbsp;satiate&nbsp;your chocolate cravings!</p>
+                </div>
+
+                <div class="card-body p-3 text-center mb-3">
+                  <h3 id="cheeseCake">Cheese Cake</h3>
+                  <p>A light-yet-rich soft cheesecake.<br />The freshness of strawberry topping on&nbsp;Cheese&nbsp;Cake will bright your&nbsp;day!</p>
+                </div>
+              </div>
+
+              <div class="card-footer background-custom-darker text-start footer-position-custom text-brown">
+                <span>&#x1F497; by 1,234 people</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4">
+            <div class="card background-custom text-orange h-100">
+              <div class="card-header p-4 border-0 background-custom">
+                <h5 class="card-title" id="cookies">Cookies</h5>
+                <img class="card-img-top featured-image" src="./assets/images/cookiesArticle.png" alt="CookiesCard" />
+              </div>
+
+              <div class="card-body p-3 text-center">
+                <div class="card-text">
+                  <h3 id="raisinCookie">Raisins Cookie</h3>
+                  <p>Classic Raisins Cookies with hints of warming ginger.<br />A touch of nostalgic treat to share with&nbsp;your&nbsp;loved&nbsp;ones!</p>
+                </div>
+
+                <div class="card-body p-3 text-center mb-3">
+                  <h3 id="chocochipCookie">Chocochips Cookie</h3>
+                  <p>Delicious Chocochip Cookies with crunchy edges and chewy middles.<br />A perfect addition to any pajamas parties!</p>
+                </div>
+              </div>
+
+              <div class="card-footer background-custom-darker text-start footer-position-custom text-brown">
+                <span>Favourite of 2,345 people</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4">
+            <div class="card background-custom text-orange h-100">
+              <div class="card-header p-4 border-0 background-custom">
+                <h5 class="card-title" id="cupcakes">Cupcakes</h5>
+                <img class="card-img-top featured-image" src="./assets/images/cupcakesArticle.png" alt="CupcakesCard" />
+              </div>
+
+              <div class="card-body p-3 text-center">
+                <div class="card-text">
+                  <h3 id="chocoCupcake">Choco Cupcake</h3>
+                  <p>A delicious cupcake with creamy chocolate frosting.<br />The milk chocolate topping makes the cupcake more&nbsp;special!</p>
+                </div>
+
+                <div class="card-body p-3 text-center mb-3">
+                  <h3 id="vanillaCupcake">Vanilla Cupcake</h3>
+                  <p>A yummy cupcake with whipped vanilla frosting.<br />The red velvet topping makes the cupcake more&nbsp;extraordinary!</p>
+                </div>
+              </div>
+
+              <div class="card-footer background-custom-darker text-start footer-position-custom text-brown">
+                <span>Recommended by 345 people</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4">
+            <div class="card background-custom text-orange h-100">
+              <div class="card-header p-4 border-0 background-custom">
+                <h5 class="card-title" id="donuts">Donuts</h5>
+                <img class="card-img-top featured-image" src="./assets/images/donutsArticle.png" alt="DonutsCard" />
+              </div>
+
+              <div class="card-body p-3 text-center">
+                <div class="card-text">
+                  <h3 id="fruitDonut">Fruits Donut</h3>
+                  <p>A healthy light snack to munch on.<br />Increase your intake of nutrient-rich fruits to&nbsp;power&nbsp;you through a&nbsp;busy&nbsp;morning!</p>
+                </div>
+
+                <div class="card-body p-3 text-center mb-3">
+                  <h3 id="sweetDonut">Sweets Donut</h3>
+                  <p>A plump and sugary treats with&nbsp;sweet&nbsp;chocolate&nbsp;glaze and&nbsp;sprinkles.<br />Donut worry and be happy with&nbsp;each bite!</p>
+                </div>
+              </div>
+
+              <div class="card-footer background-custom-darker text-start footer-position-custom text-brown">
+                <span>Favourite of 123 people</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4">
+            <div class="card background-custom text-orange h-100">
+              <div class="card-header p-4 border-0 background-custom">
+                <h5 class="card-title" id="pastries">Pastries</h5>
+                <img class="card-img-top featured-image" src="./assets/images/pastriesArticle.png" alt="PastriesCard" />
+              </div>
+
+              <div class="card-body p-3 text-center">
+                <div class="card-text">
+                  <h3 id="croissant">Croissant</h3>
+                  <p>A puff pastry that is flaky on the outside and&nbsp;soft on&nbsp;the&nbsp;inside.<br />Best for breakfast when accompanied by&nbsp;coffee!</p>
+                </div>
+
+                <div class="card-body p-3 text-center mb-3">
+                  <h3 id="macaron">Macaron</h3>
+                  <p>A delicate pastry that is crunchy on shells but&nbsp;mildly moist inside.<br />Its subtle almond flavour is a heaven match for&nbsp;tea&nbsp;time!</p>
+                </div>
+              </div>
+
+              <div class="card-footer background-custom-darker text-start footer-position-custom text-brown">
+                <span>&#x1F497; by 789 people</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="card background-custom-contact m-5">
+        <div class="card-body p-3">
+          <h1>Contact Us</h1>
+          <form>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="row px-auto pb-3 gx-1">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter Name" />
+                  </div>
+                  <div class="row px-auto pb-3 gx-1 d-lg-none">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail1" placeholder="Enter Email" />
+                  </div>
+                  <div class="row px-auto pb-3 gx-1">
+                    <label for="inputPhone">Phone</label>
+                    <input type="tel" class="form-control" id="inputPhone" placeholder="Enter Phone" />
+                  </div>
+                  <div class="row ps-0 pb-3 justify-content-between">
+                    <div class="row-md col-lg-4 col-xl-5">
+                      <label for="inputGender">Gender</label>
+                      <br />
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="radios" id="maleRadio" value="option1" />
+                        <label class="form-check-label" for="maleRadio">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline pb-3">
+                        <input class="form-check-input" type="radio" name="radios" id="femaleRadio" value="option2" />
+                        <label class="form-check-label" for="femaleRadio">Female</label>
+                      </div>
+                    </div>
+                    <div class="row-md col-lg-8 col-xl-7 my-lg-auto">
+                      <select id="inputFavouriteCat" class="form-select">
+                        <option selected>What's your favourite cat?</option>
+                        <option value="1">White cat</option>
+                        <option value="2">Black cat</option>
+                        <option value="3">Calico cat</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-md col-lg">
+                  <div class="row px-auto pb-3 gx-1 d-none d-lg-block">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail2" placeholder="Enter Email" />
+                  </div>
+                  <div class="row px-auto pb-3 gx-1">
+                    <label for="inputComments">Comment</label>
+                    <textarea class="form-control" id="inputComments" rows="5" placeholder="Enter Comment"></textarea>
+                  </div>
+                  <div class="row-md text-end pb-3">
+                    <button type="submit" class="btn btn-primary custom-size-btn">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="text-center text-orange" id="copyright">
+        <img src="./assets/images/logoTitle.png" class="logoFooter" alt="logoFooter" />
+        <p>Aurelia&nbsp;Bakery&nbsp;&#169;&nbsp;2024</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
